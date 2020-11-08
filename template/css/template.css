@@ -319,6 +319,7 @@ svg {
 }
 #about-us .number_item > .item_head > span:last-child {
 	font-size: 2.25em;
+	color: #000000;
 }
 #about-us .number_item > .item_desc {
 	margin-top: 8px;
