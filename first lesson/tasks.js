@@ -1,65 +1,41 @@
-'use strict';
-
 // First task
-let firstValue = 10;
+const firstValue = 10;
 let secondValue;
 
 secondValue = 5;
 console.log(secondValue);
-alert(firstValue + secondValue);
+alert(`${firstValue + secondValue}`);
 
 
 // Second task
-let secondTask = confirm("Перейти ко второму заданию?");
+const question = prompt("Желаете ли вы продолжить?", '');
 
-if (secondTask){
-	// Task
-	let question = prompt("Желаете ли вы продолжить?", '');
-
-	if (question == null) {
-		alert("Пользователь отменил выполнение программы");
-	} else {
-		alert("Программа выполнена");
-	}
-}
+alert(`${
+	(question != null) ? 'Программа выполнена' : 'Пользователь отменил выполнение программы'
+}`);
 
 
 // Third task
-let thirdTask = confirm("Перейти к третьему заданию?");
+const firstNumber = +prompt("Введите первое число", '');
+const secondNumber = +prompt("Введите второе число", '');
 
-if (thirdTask){
-	// Task
-	let firstNumber = +prompt("Введите первое число", '');
-	let secondNumber = +prompt("Введите второе число", '');
-
-	if (firstNumber > secondNumber) {
-		alert(firstNumber - secondNumber);
-	} else {
-		alert(firstNumber + secondNumber);
-	}
+if (isNaN(firstNumber) || isNaN(secondNumber)) {
+	alert ('Одно из введенных значений не число');
+} else {
+	alert(`${
+		(firstNumber > secondNumber) ? (firstNumber - secondNumber) : (firstNumber + secondNumber)
+	}`);
 }
 
 
 // Fifth task
-let fifthTask = confirm("Перейти к пятому заданию?");
+const firstNumber = +prompt("Введите первое число", '');
+const secondNumber = +prompt("Введите второе число", '');
 
-if (fifthTask){
-	// Task
-	let firstNumber = +prompt("Введите первое число", '');
-
-	if (isNaN(firstNumber)) {
-		alert("Вы указали значение неподходящего типа");
-	} else {
-		let secondNumber = +prompt("Введите второе число", '');
-
-		if (isNaN(secondNumber)) {
-			alert("Вы указали значение неподходящего типа");
-		} else {
-			if (firstNumber > secondNumber) {
-				alert(firstNumber - secondNumber);
-			} else {
-				alert(firstNumber + secondNumber);
-			}
-		}
-	}
+if (isNaN(firstNumber) || isNaN(secondNumber)) {
+	alert("Вы указали значение неподходящего типа");
+} else {
+	alert(`${
+		(firstNumber > secondNumber) ? (firstNumber - secondNumber) : (firstNumber + secondNumber)
+	}`);
 }
