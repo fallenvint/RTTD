@@ -44,7 +44,7 @@ function runSecondTask() {
 	const question = prompt("Желаете ли вы продолжить?", '');
 
 	alert(`${
-		(question != null) ? 'Программа выполнена' : 'Пользователь отменил выполнение программы'
+		typeof(question) === 'string' ? 'Программа выполнена' : 'Пользователь отменил выполнение программы'
 	}`);
 }
 
@@ -55,7 +55,7 @@ function runThirdTask() {
 	const secondNumber = +prompt("Введите второе число", '');
 
 	alert(`${
-		(firstNumber > secondNumber) ? (firstNumber - secondNumber) : (firstNumber + secondNumber)
+		firstNumber > secondNumber ? firstNumber - secondNumber : firstNumber + secondNumber
 	}`);
 }
 
@@ -69,7 +69,7 @@ function runFifthTask() {
 		alert("Вы указали значение неподходящего типа");
 	} else {
 		alert(`${
-			(firstNumber > secondNumber) ? (firstNumber - secondNumber) : (firstNumber + secondNumber)
+			firstNumber > secondNumber ? firstNumber - secondNumber : firstNumber + secondNumber
 		}`);
 	}
 }
