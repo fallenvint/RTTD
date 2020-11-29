@@ -114,7 +114,7 @@ let divideTwoNumbers = function(firstNumber, secondNumber){
 
 
 // Seventh task
-let sumupTwoNumbers = (firstNumber, secondNumber) => console.log(`${firstNumber + secondNumber}`);
-let subtractTwoNumbers = (firstNumber, secondNumber) => console.log(`${firstNumber - secondNumber}`);
+const sumupTwoNumbers = (firstNumber, secondNumber) => console.log(`${firstNumber + secondNumber}`);
+const subtractTwoNumbers = (firstNumber, secondNumber) => console.log(`${firstNumber - secondNumber}`);
 let multiplyTwoNumbers = (firstNumber, secondNumber) => console.log(`${firstNumber * secondNumber}`);
 let divideTwoNumbers = (firstNumber, secondNumber) => console.log(`${firstNumber / secondNumber}`);
