@@ -1,10 +1,6 @@
 const calcResult = document.getElementById('calc-result');
 
-document.querySelectorAll('.buttons input').forEach(function (button) {
-	button.addEventListener('click', onButtonClick);
-});
-
-function onButtonClick(e) {
+const onButtonClick = (e) => {
 	if (e.target.value === '=') {
 		const divide = '÷';
 		const multiple = 'X';
@@ -16,4 +12,8 @@ function onButtonClick(e) {
 	} else {
 		calcResult.value += e.target.value;
 	}
-}
+};
+
+document.querySelectorAll('.buttons input').forEach((button) => {
+	button.addEventListener('click', onButtonClick);
+});
